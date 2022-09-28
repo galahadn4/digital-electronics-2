@@ -1,10 +1,16 @@
-# Lab 1: YOUR_FIRSTNAME LASTNAME
+# Lab 1: Nicolás González Mazuelos
 
 ### Morse code
 
 1. Listing of C code which repeats one "dot" and one "comma" (BTW, in Morse code it is letter `A`) on a LED. Always use syntax highlighting, meaningful comments, and follow C guidelines:
 
 ```c
+
+#define Delay_Bt_Puls 300 // Delay betwen pulsations (dots and commas) --> 0.3 sec
+#define Delay_Bt_Letters 2000 // Delay between letters --> 2 sec
+#define Delay_Dot 500 // Time led is on to simulate a dot --> 0.5 sec
+#define Delay_Com 1500 //Time led is on to simulate a comma --> 1.5 sec
+
 int main(void)
 {
     // Set pin where on-board LED is connected as output
@@ -15,7 +21,19 @@ int main(void)
     {
         // Generate a lettre `A` Morse code
 
-        // WRITE YOUR CODE HERE
+        //Dot simulation
+         digitalWrite(LED_GREEN, HIGH); //Led turned on
+         _delay_ms(Delay_Dot);
+         digitalWrite(LED_GREEN, LOW);
+
+         _delay_ms(Delay_Bt_Puls)//Time between dot and comma
+
+         digitalWrite(LED_GREEN, HIGH); //Led turned on
+         _delay_ms(Delay_Comma);
+         digitalWrite(LED_GREEN, LOW);
+
+         _delay_ms(Delay_Bt_Letters) 
+         // At this point we have produced our first letter A, now the led is off during 2 seconds and the process will start again to produce another A
 
     }
 
