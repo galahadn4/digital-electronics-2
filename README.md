@@ -8,6 +8,10 @@ This is a repository with lab exercices of the Digital Electronics 2 course from
 
 ..* You can find my laboratory exercice [here](https://github.com/galahadn4/digital-electronics-2/tree/main/lab1-blink_arduino/test).
 
+1. First ordered list item
+2. Another item
+⋅⋅* Unordered sub-list.
+
 
 
 
