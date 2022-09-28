@@ -23,14 +23,14 @@ int main(void)
 
         //Dot simulation
          digitalWrite(LED_GREEN, HIGH); //Led turned on
-         _delay_ms(Delay_Dot);
-         digitalWrite(LED_GREEN, LOW);
+         _delay_ms(Delay_Dot); //Delay
+         digitalWrite(LED_GREEN, LOW); //Led turned off
 
          _delay_ms(Delay_Bt_Puls)//Time between dot and comma
 
          digitalWrite(LED_GREEN, HIGH); //Led turned on
-         _delay_ms(Delay_Comma);
-         digitalWrite(LED_GREEN, LOW);
+         _delay_ms(Delay_Comma); //Delay
+         digitalWrite(LED_GREEN, LOW); //Led turned off
 
          _delay_ms(Delay_Bt_Letters) 
          // At this point we have produced our first letter A, now the led is off during 2 seconds and the process will start again to produce another A
