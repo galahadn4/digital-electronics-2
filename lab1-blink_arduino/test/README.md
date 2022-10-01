@@ -11,6 +11,8 @@
 #define Delay_Dot 500 // Time led is on to simulate a dot --> 0.5 sec
 #define Delay_Com 1500 //Time led is on to simulate a comma --> 1.5 sec
 
+#define LED_GREEN PB0 //Define de LED_GREEN pin
+
 int main(void)
 {
     // Set pin where on-board LED is connected as output
