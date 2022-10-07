@@ -25,7 +25,7 @@
 #include <avr/io.h>     // AVR device-specific IO definitions
 #include <util/delay.h> // Functions for busy-wait delay loops
 
-#include <gpio.h> //P3
+//#include <gpio.h> //P3
 
 // -----
 // This part is needed to use Arduino functions but also physical pin
@@ -50,15 +50,15 @@ int main(void)
     //pinMode(LED_GREEN, OUTPUT);
     //pinMode(LED_RED,OUTPUT);
 
-    //DDRB = DDRB | (1<<LED_GREEN);
+    DDRB = DDRB | (1<<LED_GREEN);
         // 0000 0001 --> 1 in binary (we move 1 5 positions to the left)
         // 0010 0000 --> mask after shift
 
-     //DDRB = DDRB | (1<<LED_RED);// WE MOVE THE BIT 0 POSITIONS 
+    DDRB = DDRB | (1<<LED_RED);// WE MOVE THE BIT 0 POSITIONS 
 
      //P3
-     GPIO_mode_output(&DDRB, LED_GREEN);
-     GPIO_mode_output(&DDRB,LED_RED);
+    //  GPIO_mode_output(&DDRB, LED_GREEN);
+    //  GPIO_mode_output(&DDRB,LED_RED);
 
     // Infinite loop
     while (1)
@@ -74,21 +74,22 @@ int main(void)
         if (led_value == 0){
             led_value = 1;
 
-            //PORTB = PORTB | (1<<LED_GREEN); //P2
-           // PORTB = PORTB | (1<<LED_RED);//P2
+            PORTB = PORTB | (1<<LED_GREEN); //P2
+            PORTB = PORTB | (1<<LED_RED);//P2
 
            //P3
-           GPIO_write_high(&PORTB,LED_GREEN);
-           GPIO_write_high(&PORTB,LED_RED);
+        //    GPIO_write_high(&PORTB,LED_GREEN);
+        //    GPIO_write_high(&PORTB,LED_RED);
         }
         else{
             led_value = 0;
-            //PORTB = PORTB & ~(1<<LED_GREEN);//P2
-            //PORTB = PORTB & ~(1<<LED_RED);//P2
+            PORTB = PORTB & ~(1<<LED_GREEN);//P2
+            
+            PORTB = PORTB & ~(1<<LED_RED);//P2
 
             //P3
-            GPIO_write_low(&PORTB, LED_GREEN);
-            GPIO_write_low(&PORTB, LED_RED);
+            // GPIO_write_low(&PORTB, LED_GREEN);
+            // GPIO_write_low(&PORTB, LED_RED);
         }
     }
 
