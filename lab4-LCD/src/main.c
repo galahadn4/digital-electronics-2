@@ -100,7 +100,7 @@ ISR(TIMER2_OVF_vect){
 
     static uint8_t no_of_overflows = 0;
     static uint8_t tenths = 0;  // Tenths of a second
-    static uint8_t d_secs = 0;  // Decimal Seconds
+    
     static uint8_t u_secs = 0; // Unit seconds
     char string[2];             // String for converted numbers by itoa()
 
