@@ -78,6 +78,11 @@ int main(void)
     // Enables interrupts by setting the global interrupt mask
     sei();
 
+    uart_puts("\033[4;32m");        // 4: underline style; 32: green foreground
+uart_puts("This is all Green and Underlined.");
+uart_puts("\033[0m");           // 0: reset all attributes
+uart_puts("This is Normal text again.");
+
     // Infinite loop
     while (1)
     {
