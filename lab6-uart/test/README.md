@@ -1,5 +1,5 @@
 
-# Lab 6: INSERT_YOUR_FIRSTNAME INSERT_YOUR_LASTNAME
+# Lab 6: Nicolás González Mazuelos
 
 ### ASCII
 
